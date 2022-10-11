@@ -1,18 +1,13 @@
 {
   "name": "intro-section-with-dropdown-nav",
   "version": "1.0.0",
-  "description": "![Design preview for the Intro Section With Dropdown Navigation coding challenge](./develop/assets/images/desktop-preview.jpg)",
+  "description": "",
   "main": "index.js",
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "sass --watch develop/sass/main.scss develop/css/styles.css & npm run ts",
-    "build": "sass develop/sass/main.scss develop/css/styles.css --style=compressed",
-    "ts": "tsc develop/js/script.ts --watch",
-    "tailwind-build": "tailwindcss -i ./input.css -o ./develop/css/main.css",
-    "tailwind-watch": "tailwindcss -i develop/css/styles.css -o develop/css/styles2.css --watch",
     "dev": "vite",
-    "vite-build": "tsc && vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "repository": {

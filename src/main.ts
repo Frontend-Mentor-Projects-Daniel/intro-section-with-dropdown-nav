@@ -1,2 +1,2 @@
-// import './sass/style.scss';
 import './sass/main.scss';
+import './js/script.ts';
