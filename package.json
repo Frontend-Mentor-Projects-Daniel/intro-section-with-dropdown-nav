@@ -1,0 +1,37 @@
+{
+  "name": "intro-section-with-dropdown-nav",
+  "version": "1.0.0",
+  "description": "![Design preview for the Intro Section With Dropdown Navigation coding challenge](./develop/assets/images/desktop-preview.jpg)",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "sass --watch develop/sass/main.scss develop/css/styles.css & npm run ts",
+    "build": "sass develop/sass/main.scss develop/css/styles.css --style=compressed",
+    "ts": "tsc develop/js/script.ts --watch",
+    "tailwind-build": "tailwindcss -i ./input.css -o ./develop/css/main.css",
+    "tailwind-watch": "tailwindcss -i develop/css/styles.css -o develop/css/styles2.css --watch",
+    "dev": "vite",
+    "vite-build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frontend-Mentor-Projects-Daniel/intro-section-with-dropdown-nav.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frontend-Mentor-Projects-Daniel/intro-section-with-dropdown-nav/issues"
+  },
+  "homepage": "https://github.com/Frontend-Mentor-Projects-Daniel/intro-section-with-dropdown-nav#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.17",
+    "sass": "^1.55.0",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}

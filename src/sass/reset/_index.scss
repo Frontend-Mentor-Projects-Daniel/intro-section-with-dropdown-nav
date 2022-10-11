@@ -1,5 +1,5 @@
 /**------------------- 
-**      RESET
+**     RESET
 --------------------*/
 *,
 *::before,
@@ -29,6 +29,17 @@ h6,
 p {
   font-weight: 400;
 }
+/* set up the body */
+body {
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-dark));
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
 /* make images easier to work with */
 img,
 picture {
@@ -52,38 +63,4 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-/**------------------- 
-**   CUSTOM PROPS
---------------------*/
-:root {
-/* COLOURS */
-
-  /* FONT FAMILY */
-
-  /* FONT SIZE */
-
-  /* FONT WEIGHT */
-
-  /* BREAKPOINTS */
-}
-
-/**------------------- 
-**    UTILITIES
---------------------*/
-
-/**------------------- 
-**     GENERAL
---------------------*/
-body {
-}
-
-.main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100vw;
-  min-height: 100vh;
 }
