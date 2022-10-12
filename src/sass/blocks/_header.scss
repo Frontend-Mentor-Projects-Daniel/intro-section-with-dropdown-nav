@@ -1,0 +1,96 @@
+@use '../mixins/breakpoints' as *;
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  margin-top: var(--space-s-l);
+  padding-inline: var(--space-s-l);
+
+  &__logo {
+    img {
+    }
+  }
+
+  &__nav {
+    justify-self: end;
+
+    .menu {
+    }
+
+    .nav-list {
+      display: none;
+    }
+
+    .wrapper {
+      display: none;
+
+      .login-btn {
+      }
+
+      .register-btn {
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    & {
+      grid-template-columns: max-content 1fr;
+      column-gap: 3.75rem;
+
+      &__logo {
+        img {
+        }
+      }
+
+      &__nav {
+        justify-self: start;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        width: 100%;
+
+        .menu {
+          display: none;
+        }
+
+        .nav-list {
+          display: flex;
+          gap: 2.5rem;
+        }
+
+        .wrapper {
+          justify-self: end;
+
+          display: flex;
+          gap: 2.5rem;
+
+          .login-btn {
+          }
+
+          .register-btn {
+          }
+        }
+      }
+    }
+  }
+
+  // for when the screen size gets too small and the menu and logo touch
+  @include breakpoint-custom(12.5rem) {
+    & {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-items: center;
+      row-gap: 1rem;
+
+      &__nav {
+        justify-self: center;
+
+        .menu {
+        }
+      }
+    }
+  }
+}
