@@ -1,0 +1,84 @@
+@use '../mixins/breakpoints' as *;
+
+.intro {
+  --measure: 79.6875rem;
+
+  grid-gap: 0;
+  justify-items: center;
+
+  margin-top: 1.5rem;
+
+  &__image {
+    --d: 0;
+    --n: 0;
+
+    max-height: 640px;
+    max-width: 480px;
+    overflow: visible;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 68px 102px 96px;
+    align-items: center;
+    justify-items: center;
+
+    .clients {
+      align-self: end;
+
+      display: flex;
+      gap: 1.8125rem;
+
+      padding-inline: 1rem;
+
+      div {
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    & {
+      margin-top: 4.1875rem;
+
+      &__image {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+
+      &__content {
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+        align-self: center;
+        grid-template-rows: 209px 135px 164px;
+        justify-items: start;
+
+        h1 {
+          span {
+            display: block;
+          }
+        }
+
+        .clients {
+          padding-inline: 0;
+        }
+      }
+    }
+  }
+
+  @include breakpoint-custom(260px) {
+    & {
+      &__content {
+        grid-template-rows: repeat(4, max-content);
+
+        .clients {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

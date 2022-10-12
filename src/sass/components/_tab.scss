@@ -1,12 +1,14 @@
 .tab {
   color: hsla(0, 0%, 41%, 1);
+  cursor: pointer;
   font-weight: 500;
-}
-
-.tab:hover {
-  color: hsla(0, 0%, 8%, 1);
 }
 
 .tab__item {
   color: hsla(0, 0%, 41%, 1);
+  cursor: pointer;
+}
+
+.tab-item:hover {
+  color: hsla(0, 0%, 8%, 1);
 }

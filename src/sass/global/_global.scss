@@ -47,6 +47,10 @@ body {
   font-family: var(--ff-epilogue);
 }
 
+body * {
+  color: inherit;
+}
+
 h1 {
   font-size: var(--step-4);
 }
@@ -54,6 +58,14 @@ h1 {
 p,
 .btn {
   font-size: var(--step-0);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .tab,
