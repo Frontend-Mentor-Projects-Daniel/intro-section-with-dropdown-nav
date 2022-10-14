@@ -48,10 +48,81 @@
         </button>
 
         <ul class="[ nav-list ]">
-          <li class="[ tab ]">Features</li>
-          <li class="[ tab ]">Company</li>
-          <li class="[ tab ]">Careers</li>
-          <li class="[ tab ]">About</li>
+          <li class="[ tab has-submenu ]">
+            <a
+              class="[ tab__item ]"
+              href="#"
+              aria-expanded="false"
+              aria-haspopup="true"
+              >Features</a
+            >
+            <button class="[ with-icon ]" aria-expanded="false">
+              <svg class="[ icon ]">
+                <use
+                  xlink:href="./src/assets/images/sprite.svg#icon-arrow-down"
+                ></use>
+              </svg>
+              <span class="[ sr-only ]">dropdown menu</span>
+            </button>
+            <ul class="[ sub-menu ]">
+              <li class="[ has-icon ]">
+                <svg>
+                  <use
+                    xlink:href="./src/assets/images/sprite.svg#icon-todo"
+                  ></use>
+                </svg>
+                <a href="#">Todo List</a>
+              </li>
+              <li class="[ has-icon ]">
+                <svg>
+                  <use
+                    xlink:href="./src/assets/images/sprite.svg#icon-calendar"
+                  ></use>
+                </svg>
+                <a href="#">Calendars</a>
+              </li>
+              <li class="[ has-icon ]">
+                <svg>
+                  <use
+                    xlink:href="./src/assets/images/sprite.svg#icon-reminders"
+                  ></use>
+                </svg>
+                <a href="#">Reminders</a>
+              </li>
+              <li class="[ has-icon ]">
+                <svg>
+                  <use
+                    xlink:href="./src/assets/images/sprite.svg#icon-planning"
+                  ></use>
+                </svg>
+                <a href="#">Planning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="[ tab has-submenu ]">
+            <a
+              class="[ tab__item ]"
+              href="#"
+              aria-expanded="false"
+              aria-haspopup="true"
+              >Company</a
+            >
+            <button class="[ with-icon ]" aria-expanded="false">
+              <svg class="[ icon ]">
+                <use
+                  xlink:href="./src/assets/images/sprite.svg#icon-arrow-down"
+                ></use>
+              </svg>
+              <span class="[ sr-only ]">dropdown menu</span>
+            </button>
+            <ul class="[ sub-menu ]">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="[ tab ]"><a class="[ tab__item ]" href="#">Careers</a></li>
+          <li class="[ tab ]"><a class="[ tab__item ]" href="#">About</a></li>
         </ul>
 
         <div class="wrapper">
