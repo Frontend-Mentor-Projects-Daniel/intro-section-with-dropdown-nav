@@ -78,6 +78,16 @@ a {
   font-size: 0.875rem;
 }
 
+.register-btn {
+  border: 1px solid rgba(104, 104, 104, 1);
+  border-radius: 0.9375rem;
+  padding: 0.9em 1.5em;
+}
+
+.register-btn:hover {
+  border-color: rgba(21, 21, 21, 1);
+}
+
 @include breakpoint(tablet) {
   .tab,
   .tab__item {

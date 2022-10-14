@@ -86,7 +86,7 @@
 
             .sub-menu {
               position: absolute;
-              top: 184%;
+              top: 81%;
               right: -40%;
 
               display: flex;
@@ -132,6 +132,7 @@
           justify-self: end;
 
           display: flex;
+          align-items: center;
           gap: 2.5rem;
 
           .login-btn {
