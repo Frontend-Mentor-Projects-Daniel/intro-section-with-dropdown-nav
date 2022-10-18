@@ -38,7 +38,7 @@
         <img src="./src/assets/images/logo.svg" alt="snap" />
       </div>
 
-      <nav class="[ header__nav ]" aria-label="header navigation">
+      <nav class="[ header__navbar ]">
         <button class="[ menu ]" aria-expanded="false" aria-label="Menu">
           <img
             src="./src/assets/images/icon-menu.svg"
@@ -50,8 +50,8 @@
         <ul class="[ nav-list ]">
           <li class="[ tab has-submenu ]">
             <a
-              class="[ tab__item ]"
               href="#"
+              class="[ tab__item ]"
               aria-expanded="false"
               aria-haspopup="true"
               >Features</a
@@ -64,45 +64,46 @@
               </svg>
               <span class="[ sr-only ]">dropdown menu</span>
             </button>
-            <ul class="[ sub-menu ]">
+
+            <ul class="[ sub-menu ]" data-left>
               <li class="[ has-icon ]">
-                <svg>
+                <svg class="[ icon ]">
                   <use
                     xlink:href="./src/assets/images/sprite.svg#icon-todo"
                   ></use>
                 </svg>
-                <a href="#">Todo List</a>
+                <a href="#" class="[ tab__item ]">Todo List</a>
               </li>
               <li class="[ has-icon ]">
-                <svg>
+                <svg class="[ icon ]">
                   <use
                     xlink:href="./src/assets/images/sprite.svg#icon-calendar"
                   ></use>
                 </svg>
-                <a href="#">Calendars</a>
+                <a href="#" class="[ tab__item ]">Calendars</a>
               </li>
               <li class="[ has-icon ]">
-                <svg>
+                <svg class="[ icon ]">
                   <use
                     xlink:href="./src/assets/images/sprite.svg#icon-reminders"
                   ></use>
                 </svg>
-                <a href="#">Reminders</a>
+                <a href="#" class="[ tab__item ]">Reminders</a>
               </li>
               <li class="[ has-icon ]">
-                <svg>
+                <svg class="[ icon ]">
                   <use
                     xlink:href="./src/assets/images/sprite.svg#icon-planning"
                   ></use>
                 </svg>
-                <a href="#">Planning</a>
+                <a href="#" class="[ tab__item ]">Planning</a>
               </li>
             </ul>
           </li>
           <li class="[ tab has-submenu ]">
             <a
-              class="[ tab__item ]"
               href="#"
+              class="[ tab__item ]"
               aria-expanded="false"
               aria-haspopup="true"
               >Company</a
@@ -115,29 +116,29 @@
               </svg>
               <span class="[ sr-only ]">dropdown menu</span>
             </button>
-            <ul class="[ sub-menu ]">
-              <li><a href="#">History</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Blog</a></li>
+
+            <ul class="[ sub-menu ]" data-right>
+              <li><a href="#" class="[ tab__item ]">History</a></li>
+              <li><a href="#" class="[ tab__item ]">Our Team</a></li>
+              <li><a href="#" class="[ tab__item ]">Blog</a></li>
             </ul>
           </li>
-          <li class="[ tab ]"><a class="[ tab__item ]" href="#">Careers</a></li>
-          <li class="[ tab ]"><a class="[ tab__item ]" href="#">About</a></li>
+
+          <li class="[ tab ]">
+            <a href="#" class="[ tab__item ]">Careers</a>
+          </li>
+          <li class="[ tab ]">
+            <a href="#" class="[ tab__item ]">About</a>
+          </li>
         </ul>
 
         <div class="wrapper">
-          <a
-            href="#"
-            class="[ login-btn ] [ text-medium-grey ] [ hover:text-black ]"
-            >Login</a
-          >
-          <a
-            href="#"
-            class="[ register-btn ] [ text-medium-grey ] [ hover:text-black ]"
-            >Register</a
-          >
+          <a href="#" class="[ login-btn ]">Login</a>
+          <a href="#" class="[ register-btn ]">Register</a>
         </div>
       </nav>
+
+      <div class="[ header__overlay ]"></div>
     </header>
 
     <main class="[ main ]">
@@ -167,7 +168,7 @@
             processes, create team rituals, and watch productivity soar.
           </p>
           <button class="[ btn ]">Learn more</button>
-          <div class="[ clients ]">
+          <div class="[ clients ]" aria-label="important clients">
             <div class="[ frame ]">
               <img src="./src/assets/images/client-databiz.svg" alt="databiz" />
             </div>

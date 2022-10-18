@@ -1,164 +1,50 @@
 @use '../mixins/breakpoints' as *;
 
 .header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
 
   margin-top: var(--space-s-l);
   padding-inline: var(--space-s-l);
 
-  &__logo {
-    img {
-    }
+  &__navbar.active + &__overlay {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+
+    background: #151515;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    z-index: 1;
   }
 
-  &__nav {
-    justify-self: end;
+  &__logo {
+    flex-shrink: 0;
+  }
 
-    .menu {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-    }
+  &__navbar {
+    flex-grow: 1;
 
-    .nav-list {
-      display: none;
-
-      .tab {
-        .tab__item {
-        }
-        button.with-icon {
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-          direction: rtl;
-
-          svg.icon {
-            margin-inline-end: 0;
-          }
-        }
-      }
-    }
-
-    .wrapper {
-      display: none;
-
-      .login-btn {
-      }
-
-      .register-btn {
-      }
-    }
+    z-index: 111;
   }
 
   @include breakpoint(tablet) {
     & {
-      grid-template-columns: max-content 1fr;
-      column-gap: 3.75rem;
+      gap: var(--space-3xs-xl);
+      align-items: center;
 
-      margin-bottom: 6.8125rem;
-
-      &__logo {
-        img {
-        }
-      }
-
-      &__nav {
-        justify-self: start;
-
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-
-        width: 100%;
-
-        .menu {
-          display: none;
-        }
-
-        .nav-list {
-          display: flex;
-          gap: 2.5rem;
-
-          .tab {
-            position: relative;
-
-            .sub-menu {
-              position: absolute;
-              top: 81%;
-              right: -40%;
-
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              gap: 1rem;
-
-              background: #ffffff;
-              box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
-              border-radius: 10px;
-              cursor: auto;
-              min-width: 116px;
-              // height: 128px;
-              padding-block: 1em;
-
-              display: none;
-
-              li.has-icon {
-                display: flex;
-                gap: 1rem;
-
-                svg {
-                  height: 1rem;
-                  width: 1rem;
-                }
-              }
-            }
-
-            &.open {
-              .sub-menu {
-                display: grid;
-              }
-            }
-
-            .sub-menu:hover {
-              display: grid;
-            }
-          }
-        }
-
-        .wrapper {
-          justify-self: end;
-
-          display: flex;
-          align-items: center;
-          gap: 2.5rem;
-
-          .login-btn {
-          }
-
-          .register-btn {
-          }
-        }
-      }
+      margin-bottom: 8rem;
     }
   }
 
-  // for when the screen size gets too small and the menu and logo touch
-  @include breakpoint-custom(12.5rem) {
+  // wrap when menu and logo get to close and cause each other to shrink
+  @include breakpoint-custom(9.3125rem) {
     & {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      justify-items: center;
-      row-gap: 1rem;
-
-      &__nav {
-        justify-self: center;
-
-        .menu {
-        }
-      }
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 }
