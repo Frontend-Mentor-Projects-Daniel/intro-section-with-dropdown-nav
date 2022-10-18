@@ -10,9 +10,6 @@ const tabs = Array.from(
 const selectButtons = Array.from(
   document.querySelectorAll('button.with-icon')
 ) as HTMLButtonElement[];
-const subMenus = Array.from(
-  document.querySelectorAll('.sub-menu')
-) as HTMLUListElement[];
 
 // toggle side nav on menu click
 menuButton.addEventListener('click', () => {
