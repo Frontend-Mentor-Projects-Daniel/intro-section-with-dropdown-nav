@@ -52,6 +52,12 @@
 
       .sub-menu {
         display: none;
+
+        li {
+          display: grid;
+          grid-template-columns: 82px 20px;
+          column-gap: 1rem;
+        }
       }
 
       button[aria-expanded='true'] + .sub-menu {
