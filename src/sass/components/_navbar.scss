@@ -31,7 +31,6 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: max-content max-content;
-      // row-gap: 1.5rem;
 
       .tab__item {
         grid-column: 1/2;
@@ -148,23 +147,23 @@
             background: #ffffff;
             box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
             border-radius: 10px;
-            // height: 160px;
-            // width: 157%;
-            padding: 1.8em 2.4em;
 
             li {
               text-align: center;
-              // margin-inline-start: 25px;
               flex-shrink: 0;
             }
           }
 
           button[aria-expanded='true'] + .sub-menu[data-left] {
             right: 0;
+
+            padding: 1.8em 2.4em;
           }
 
           button[aria-expanded='true'] + .sub-menu[data-right] {
             left: 0;
+
+            padding: 1.8em 1em;
           }
         }
       }
